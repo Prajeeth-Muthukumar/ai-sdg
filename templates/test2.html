@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Helon</title>
+    </head>
+
+    <body>
+        {%if already_log %}
+            <h1>Already Logged In</h1> 
+        {% endif %}
+
+        {% if Data %}
+            <h1>Hi, {{Data}}</h1>
+        {% endif %}
+
+        {%if not Data%}
+            <h1>Login for Accessing More Features</h1>
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="display: flex;position: fixed;width: 100%;">
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <img src="C:\Users\tone6\Downloads\ICON_PNG.png" alt="ICON" style="max-height: 30px;"></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/" style="padding-left: 35px !important;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Risk Preditor <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us <span class="sr-only">(current)</span></a>
+          </li>
+        </ul> 
+        <div class="ml-auto d-flex" style="gap: 20px;">
+          {% if not login_Stat %}
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button>
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+          {% endif %}
+          {% if login_Stat%}
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Profile</button></span>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log Out</button>
+          {% endif %}
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/shortcuticon.ico') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href = "{{ url_for('static', filename='css/looks.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+        <!--  -->
+        
+        <!--  -->
+    </head>
+    <body class="SpecialClass">
+        <!--  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="display: flex;position: fixed;width: 100%;">
+          <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item"> <img src="{{ url_for('static', filename='images/icon.png') }}" alt="ICON" style="max-height: 30px;"></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/" style="padding-left: 35px !important;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Risk Preditor <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About Us <span class="sr-only">(current)</span></a>
+                </li>
+              </ul> 
+              <div class="ml-auto d-flex" style="gap: 20px;">
+                {% if not login_Stat %}
+                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick= "location.href='/login'">Log In</button>
+                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick= "location.href='/signup'">Sign Up</button>
+                {% endif %}
+                {% if login_Stat%}
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick= "location.href='/profile'">Profile</button></span>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick= "location.href='/logout'">Log Out</button>
+                {% endif %}
+              </div>
+          </div>
+      </nav>
+  
+        <!--  -->
+        <div class="container mt-5">
+            <div class="row">
+                <div >
+                    <div class="mb-6">
+                        <!--  -->
+                        
+                        <!--  -->
+                        <h2 class="center_pink" style="color: #a6141f;text-decoration-color: #a6141f;">Low Risk. <br> You are healthy!</h1>
+                         <hr style="border-top: 1px solid #a6141f;">
+                         <p style="color:white;width: 100%;background-color: rgba(90, 81, 74, 0.7);padding: 3px;box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                            Improving the health of a mother with low-risk health complications involves a combination of medical care, lifestyle changes, and support. Here are some key steps:<br>
+                            Regular Prenatal Care: Ensure regular check-ups with a healthcare provider to monitor the health of both the mother and the baby. This helps in early detection and management of any complications2.<br>
+                            Balanced Diet: A nutritious diet rich in fruits, vegetables, whole grains, lean proteins, and dairy is essential. Adequate intake of folic acid, iron, calcium, and other vitamins is crucial for the health of the mother and the developing baby.<br>
+                            Hydration: Drinking plenty of water helps in maintaining amniotic fluid levels and supports overall health.<br>
+                            Exercise: Regular, moderate exercise such as walking, swimming, or prenatal yoga can help maintain a healthy weight, reduce stress, and improve overall well-being.<br>
+                            Rest and Sleep: Adequate rest and sleep are important for the mother's health. It helps in reducing stress and fatigue.<br>
+                            Avoid Harmful Substances: Avoid smoking, alcohol, and drugs as they can harm both the mother and the baby.<br>
+                            Manage Stress: Techniques such as meditation, deep breathing exercises, and prenatal massages can help in managing stress.<br>
+                            Education and Support: Attending prenatal classes and joining support groups can provide valuable information and emotional support.<br>
+                            Vaccinations: Ensure that all recommended vaccinations are up to date to protect both the mother and the baby from preventable diseases<br>
+                            Monitor Health Conditions: If the mother has any pre-existing health conditions such as diabetes or hypertension, it is important to manage them effectively with the help of healthcare providers.<br>
+                            By following these steps, a mother with low-risk health complications can improve her health and ensure a healthy pregnancy and childbirth experience<br>
+                         </p>    
+                    </div>   
+                </div>
+            </div>
+        </div>                 
+    </body>
+</html>
